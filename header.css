@@ -57,12 +57,12 @@ header li > a{
 .detail{
     position: absolute;
     /* top:-8px; */
-    left: 8px;
-    width: 150px;
+    left: 5px;
+    width: 140px;
     height: 30px;
-    background-color: var(--circle-color);
+    background-color: var(--detail-color);
     z-index:-1;
-    opacity: 0.3;
+    opacity: 0.5;
     bottom: 5px;
     right:5px;
     transform: rotate(-7deg);
