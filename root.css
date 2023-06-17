@@ -1,6 +1,6 @@
 :root {
-  /* #9eeb34 */
     --detail-color:#c7ef29;
+    --btn-color:#d0e383b6;
     --primary-color: #ff6b6b;
     --secondary-color: #794afa;
     --secondary-dark-color: #453c5c;
@@ -9,6 +9,7 @@
     --light-text-color: #7c899a;
     --border-color: #e5e8ec;
     --dark-color: #0a021c;
+    --secondary-dark-color:#21114c;
   
     --font-small: 13px;
     --font-smaller: 11px;
@@ -25,4 +26,12 @@
     --trans-background-color: background-color 0.3s, color 0.3s;
     --trans-background: background-color 0.3s;
     --trans-color: color 0.3s;
+  }
+  @keyframes popIn{
+    0%{
+      color: var(--secondary-dark-color);
+    }
+    100%{
+      color:var(--primary-color);
+    }
   }

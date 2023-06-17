@@ -110,3 +110,86 @@ nav .flyItem{
     margin-bottom: 1.5em;
     z-index: 1;
 }
+.container .flexcol .textContent h4{
+    animation: popIn 0.8s infinite;
+}
+.headerMain{
+    background-color: var(--btn-color);
+    padding: 1.5em 0;
+    margin-bottom: 2em;
+}
+.dptCat{
+    position: relative;
+    z-index: 1;
+}
+.dptCat .dptHead{
+    position: relative;
+    width: 300px;
+    padding: 0.75em 1.5em;
+    background-color: var(--secondary-color);
+    opacity: 0.8;
+    color:var(--white-color);
+    margin-bottom: -2em;
+    border-radius: 7px 7px 0 0;
+}
+.dptCat .dptHead .miniText{
+    color:var(--light-bg-color);
+}
+.dptCat .dptTrigger{
+    position: absolute;
+    right:0;
+    top:0;
+    padding: 1.3em;
+    height: 60px;
+    width: 60px;
+}
+.dptMenu >ul>li>a{
+    font-size: var(--font-small);
+    height: 50px;
+    align-items: center;
+}
+
+.miniText{
+    font-size: var(--font-small);
+    color:var(--light-text-color);
+}
+.headerMain .right{
+    flex:1;
+}
+form{
+    position: relative;
+}
+form.search input{
+    line-height: 3.25em;
+    padding: 0 7em 0 4.5em;
+    border: 0;
+    outline: 0;
+    width: var(--percent100);
+    border-radius: 7px;
+    font-size: 0.9em;
+    font-weight: var(--fw3);
+}
+form.search span, form.search button{
+    position: absolute;
+    top:0;
+    padding: 0.55em 1.5em;
+    font-size: 1em;
+    color:var(--light-text-color);
+    height: var(--percent100);
+}
+form.search button{
+    right: 0;
+    border: 0;
+    outline: 0;
+    font-size: 0.9em;
+    cursor: pointer;
+    font-weight: var(--fw6);
+    background-color: var(--secondary-color);
+    opacity: 0.85;
+    color:var(--white-color);
+    border-radius: 0 7px 7px 0;
+    transition: var(--trans-background); 
+}
+form.search button:hover{
+    background-color: var(--secondary-dark-color);
+}

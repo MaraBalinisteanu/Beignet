@@ -104,7 +104,7 @@ h4 {
 
 .iconSmall {
   font-size: 1.25em;
-  margin: auto;
+  margin-left: auto;
 }
 .iconLarge {
   font-size: 1.75em;
@@ -126,10 +126,42 @@ h4 {
   flex-shrink: 0;
   overflow: hidden;
 }
-
-
-
-
+.primaryBtn, .secondaryBtn, .lightBtn{
+  font-size: var(--font-small);
+  padding: 0.9em 2em;
+  height:auto;
+  width: fit-content;
+  border-radius: 2em;
+  transform: var(--trans-background-color);
+}
+.primaryBtn{
+  background-color: var(--btn-color);
+  color:var(--secondary-dark-color);
+}
+.primaryBtn:hover{
+  background-color: var(--dark-color);
+}
+.secondaryBtn{
+  background-color: var(--secondary-dark-color);
+  color:var(--white-color);
+}
+.secondaryBtn:hover{
+  background-color: var(--light-bg-color);
+  color:var(--secondary-dark-color);
+}
+.lightBtn{
+  background-color: var(--light-bg-color);
+}
+.lightBtn:hover{
+  background-color: var(--secondary-dark-color);
+  color:var(--white-color);
+}
+.viewAll{
+  font-size: var(--font-small);
+  display: flex;
+  gap:1em;
+  transition: var(--trans-color);
+}
 
 
 
@@ -171,6 +203,11 @@ h4 {
     line-height: 2em;
     background-color: var(--light-bg-color);
     z-index: 2;
+
+    display: none;
+  }
+  nav li.dropDown:hover .mega{
+    display:block;
   }
   nav .mega .wrapper{
     display: flex;
@@ -224,7 +261,88 @@ h4 {
     text-align: center;
     color:var(--secondary-dark-color);
   }
+  .headerMain .right{
+    max-width: 600px;
+    margin-left: auto;
+  }
+/* Dpt Menu */
+  .dptMenu{
+    position: absolute;
+    top:var(--percent100);
+    width: 300px;
+    background-color: var(--white-color);
+    border:1px solid var(--border-color);
+    border-top: 0;
+    border-bottom: 0;
+  }
+  .dptMenu >ul>li>a{
+    font-weight: var(--fw5);
+    padding: 0 1.5em;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+
+  .dptMenu .dropDown ul, .dptMenu .mega{
+    position: absolute;
+    top:0;
+    left:var(--percent100);
+    width: var(--percent100);
+    min-height: var(--percent100);
+    height: auto;
+    line-height: 2.5em;
+    padding:1.5em ;
+    font-size: var(--font-small);
+    border:1px solid var(--border-color);
+    border-top:0;
+    display: none;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .dptMenu .fashionW .mega{
+    background-image: url(assets/menu/women.jpeg);
+  }
+  .dptMenu .fashionM .mega{
+    background-image: url(assets/menu/man.jpeg);
+  }
+  .dptMenu .fashionG .mega{
+    background-image: url(assets/menu/kid.jpeg);
+  }
+  .dptMenu .fashionB .mega{
+    background-image: url(assets/menu/boy.jpeg);
+  }
+  .dptMenu .accessories .mega{
+    background-image: url(assets/menu/purse.jpeg);
+  }
+  .dptMenu .dropDown > :where(ul,.mega)::before{
+    content:'';
+    position: absolute;
+    top:0;
+    left:0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(45deg, rgba(225,225,225,1) 0%, rgba(225,225,225,0) 70%);
+  }
+  .dptMenu .mega{
+    width:auto;
+    min-width: var(--percent100);
+  }
+  .dptMenu .dropDown:hover .mega{
+    display: flex;
+  }
+  /* .dptMenu .dropDown:hover ul{
+    display: block;
+  } */
+  /* .dptMenu .dropDown li a:hover{
+    text-decoration: underline;
+  } */
+
+
+
+
+
+
+
+
 
 
 }
-/* 27.47 */
