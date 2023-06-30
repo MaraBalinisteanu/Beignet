@@ -110,8 +110,9 @@ h4 {
   font-size: 1.75em;
   padding: 0 0.75em 0 0;
 }
+
 .mobileHide{
-    display: none;
+  display: none;
 }
 .objectCover img{
   position: relative;
@@ -179,6 +180,7 @@ h4 {
   .mobileHide{
     display: block;
   }
+
   .logo a{
     margin-right: 2em;
   }
@@ -320,7 +322,7 @@ h4 {
     left:0;
     bottom: 0;
     right: 0;
-    background: linear-gradient(45deg, rgba(225,225,225,1) 0%, rgba(225,225,225,0) 70%);
+    background: linear-gradient(120deg, rgba(225,225,225,1) 0%, rgba(225,225,225,0) 70%);
   }
   .dptMenu .mega{
     width:auto;
@@ -329,12 +331,12 @@ h4 {
   .dptMenu .dropDown:hover .mega{
     display: flex;
   }
-  /* .dptMenu .dropDown:hover ul{
+  .dptMenu .dropDown:hover ul{
     display: block;
-  } */
-  /* .dptMenu .dropDown li a:hover{
+  } 
+  .dptMenu .dropDown li a:hover{
     text-decoration: underline;
-  } */
+  }
 
 
 
