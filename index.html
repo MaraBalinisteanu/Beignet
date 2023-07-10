@@ -12,14 +12,16 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
       rel="stylesheet"
     />
-    <script async src="script.js"></script>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+    <script async src="main.js"></script>
   </head>
   <body>
     <div id="page" class="site">
 
       <aside class="siteOff desktopHide">
         <div class="offCanvas">
-          <div class="canvasHead">
+          <div class="canvasHead flexItem">
             <div class="logo"><a href=""><span class="detail"></span>Beignet</a></div>
             <a href="" class="tClose flexcenter"><i class="ri-close-line"></i></a>
           </div>
@@ -79,7 +81,7 @@
           <div class="container">
             <div class="wrapper flexItem">
               <a href="" class="trigger desktopHide" id="desktopHide"><span class="i ri-menu-line"></span></a>
-              <div class="left flexItem">
+              <div class="left flexItem ">
                 <div class="logo"><a href=""><span class="detail"></span>Beignet</a></div>
                 <nav class="mobileHide">
                     <ul class="flexItem secondLinks">
@@ -313,7 +315,188 @@
           </div>
         </div>
       </header>
-      <main></main>
+      <main>
+        <!-- slider -->
+        <div class="slideshow-container">
+
+          <!-- Full-width images with number and caption text -->
+          <div class="mySlides fade">
+            <img src="assets/slider/slider2.1.webp" alt="sliderImg">
+            <div class="text">Discover the new goodies of the week! <br>
+              <button class="sliderBtn">Shop now</button>
+            </div>
+          </div>
+        
+          <div class="mySlides fade">
+            <img src="assets/slider/slider0.jpeg" alt="sliderImg">
+            <div class="text">up to 70% off selected items  <br>
+              <button class="sliderBtn">Shop now</button>
+            </div>
+          </div>
+
+          <div class="mySlides fade">
+            <img src="assets/banner/bags.webp" alt="sliderImg">
+            <div class="text">Stop wishing, start enjoying!  <br>
+              <button class="sliderBtn">Shop now</button>
+            </div>
+          </div>
+        
+          <!-- Next and previous buttons -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+        <!-- brands -->
+        <div class="brands">
+          <div class="container">
+            <div class="wrapper flexItem">
+              <div class="item"><a href=""><img src='assets/brands/Calvin-Klein.png' alt="brandImg"></a></div>
+              <div class="item"><a href=""><img src='assets/brands/cartier-logo.png' alt="brandImg"></a></div>
+              <div class="item"><a href=""><img src='assets/brands/Gucci.png' alt="brandImg"></a></div>
+              <div class="item"><a href=""><img src='assets/brands/GUESS-Logo.png' alt="brandImg"></a></div>
+              <div class="item"><a href=""><img src='assets/brands/ysl.png' alt="brandImg"></a></div>
+              <div class="item"><a href=""><img src='assets/brands/zara.png' alt="brandImg"></a></div>
+            </div>
+          </div>
+        </div>
+        <!-- trending products -->
+        <div class="trending">
+          <div class="container">
+            <div class="wrapper ">
+              <div class="sectop flexItem">
+                <h2>
+                  <span class="detail"></span>
+                  <span>Most Popular this Week </span></h2>
+              </div>
+              <div class="column">
+
+                <div class="offer">
+                  <p>Offer expires in:</p>
+                  <ul class="flexcenter">
+                    <li>3d</li>
+                    <li>10h</li>
+                    <li>32m</li>
+                    <li>16s</li>
+                  </ul>
+                </div>
+                <div class="flexwrap">
+                  <div class="row products mini">
+                    <div class="item">
+                      <div class="media">
+                        <div class="image">
+                          <a href="">
+                            <img src="assets/products/clothesW/dress1.webp" alt="promotedProduct"></a>
+                          </div>
+                          <h3 class="mainLinks"><a href="">GUESS: White lateral cutouts short Dress</a></h3>
+                          <div class="hoverable">
+
+                            <ul>
+                              <li class="activity"><a href=""></a><i class='ri-heart-line'></i></li>
+                              <li><a href=""></a><i class='ri-eye-line'></i></li>
+                              <li><a href=""></a><i class='ri-shuffle-line'></i></li>
+                            </ul>
+                          </div>
+                          <div class="discount circle flexcenter"><span>Discount: 53.5%</span></div>
+                      </div>
+                      <div class="content">
+                        <div class="rating">
+                          <div class="stars"></div>
+                          <div class="miniText">(892)</div>
+                        </div>
+
+                        <div class="price">
+                          <span class="current">90.99€</span>
+
+                          <span class="normal miniText">169.99€</span>
+                          <div class="cut"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="sectop"></div>
+                  </div>
+                  <div class="row products mini">
+                    <div class="item">
+                      <div class="media">
+                        <div class="image">
+                          <a href="">
+                            <img src="assets/products/clothesM/camasa1.webp" alt="promotedProductMini"></a>
+                          </div>
+                          <h3 class="mainLinks"><a href="">TOMMY HILFIGER: Srtipped linen short sleeves Shirt</a></h3>
+                          <div class="hoverable">
+                            
+                            <ul>
+                              <li class="activity"><a href=""></a><i class='ri-heart-line'></i></li>
+                              <li><a href=""></a><i class='ri-eye-line'></i></li>
+                              <li><a href=""></a><i class='ri-shuffle-line'></i></li>
+                            </ul>
+                          </div>
+                          <div class="discount circle flexcenter"><span>Discount: 40%</span></div>
+                      </div>
+                      <div class="content">
+                        <div class="rating">
+                          <div class="stars"></div>
+                          <div class="miniText">(771)</div>
+                        </div>
+                        <div class="price">
+                          <span class="current">89.99€</span>
+                          <span class="normal miniText">149.99€</span>
+                          <div class="cut"></div>
+                        </div>
+                        <div class="miniText">
+                          <p>Free shipping on orders over 99.99€</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="sectop"></div>
+                  </div>
+                  <div class="row products mini">
+                    <div class="item">
+                      <div class="media">
+                        <div class="image">
+                          <a href="">
+                            <img src="assets/products/kids/baieti/pant1.webp" alt="promotedProductMini"></a>
+                          </div>
+                          <h3 class="mainLinks"><a href="">ZARA: Boys cargo Pants</a></h3>
+                          <div class="hoverable">
+                            <ul>
+                              <li class="activity"><a href=""></a><i class='ri-heart-line'></i></li>
+                              <li><a href=""></a><i class='ri-eye-line'></i></li>
+                              <li><a href=""></a><i class='ri-shuffle-line'></i></li>
+                            </ul>
+                          </div>
+                          <div class="discount circle flexcenter"><span>Discount: 37%</span></div>
+                      </div>
+                      <div class="content">
+
+                        <div class="rating">
+                          <div class="stars"></div>
+                          <div class="miniText">(283)</div>
+                        </div>
+                        <div class="price">
+                          <span class="current">40.95€</span>
+                          <span class="normal miniText">64.99€</span>
+                          <div class="cut"></div>
+                        </div>
+                        <div class="miniText">
+                          <p>Free shipping on orders over 99.99€</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="sectop"></div>
+                  </div>
+                </div>
+             </div>
+          </div>
+        </div>
+      </main>
       <footer></footer>
     </div>
   </body>

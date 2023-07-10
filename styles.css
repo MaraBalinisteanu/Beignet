@@ -166,9 +166,6 @@ h4 {
 
 
 
-
-
-
 @media screen and (min-width: 992px) {
   .container {
     padding: 0 2em;
@@ -338,13 +335,22 @@ h4 {
     text-decoration: underline;
   }
 
+  /* slider */
+  main .slideshow-container{
+    max-width: 60%;
+    left:15%;
+  }
+  .dot{
+    left:15%;
+  }
 
-
-
-
-
-
-
+  /* products main page */
+  .trending .products{
+    flex:0 0 33.333%;
+  }
+  div.flexwrap{
+    flex-direction: row;
+  }
 
 
 }

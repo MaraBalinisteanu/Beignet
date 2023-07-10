@@ -4,7 +4,7 @@
     line-height: inherit;
     transition: var(--trans-color);
 } 
-.headerTop .wrapper{
+.wrapper{
     font-size: var(--font-small);
     font-weight: var(--fw3);
     justify-content: space-between;
@@ -57,14 +57,13 @@
 .detail{
     position: absolute;
     /* top:-8px; */
-    left: 5px;
-    width: 145px;
+    left: 3px;
+    width: 120px;
     height: 40px;
     background-color: var(--detail-color);
     z-index:-1;
     opacity: 0.5;
     bottom: 3px;
-    right:3px;
     transform: rotate(-7deg);
     border-radius: 60%;
 }
@@ -200,17 +199,19 @@ form.search button:hover{
     width: 320px;
     height: var(--percent100);
     background-color: var(--white-color);
-    overflow: auto;
+    overflow-y: auto;
     z-index: 200;
     transform: translateX(-100%);
-    visibility: hidden;
+    /* visibility: hidden; */
+    display: none;
     transition: transform .4s, visibility .4s;
     will-change: transform, visibility;
 }
 .showmenu .siteOff{
     transform: translateX(0);
-    visibility: visible;
-    transform: transform 0.4s 0s, visibility 0s 0s;
+    /* visibility: visible; */
+    display: block;
+    transform: transform .4s 0s, visibility 0s 0s;
 }
 .offCanvas{
     width: var(--percent100);
@@ -228,7 +229,7 @@ form.search button:hover{
     border-bottom-right-radius: 160px 25px;
 }
 .offCanvas .canvasHead .logo{
-    z-index: 1;
+    z-index: 10;
     position: relative;
 }
 .offCanvas .canvasHead .logo .detail{
@@ -264,7 +265,7 @@ form.search button:hover{
     height: auto;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s cubic-bezier(0.215, 0.610, 0.355, 1);
+    transition: max-height .3s cubic-bezier(0.215, 0.610, 0.355, 1);
 }
 .offCanvas .expand > :where(ul, .mega){
     max-height: 2000px;
