@@ -125,12 +125,15 @@
   font-size: 1.5em;
   font-weight: var(--fw7);
 }
+.item .image img{
+  max-height: 600px;
+}
 .sectop h2 span:not(.detail){
   padding: 0 0 0 2em;
 }
 .sectop h2 .detail{
-  left:30px;
-  width:65px;
+  left:35px;
+  width:75px;
   height: 35px;
 }
 .flexwrap {
@@ -239,6 +242,106 @@ h3.mainLinks{
   border-top: 1px solid var(--light-text-color);
   content: ' ';
   transform: rotate(-17deg);
-  left:65px;
+  left:80px;
   bottom:22px;
+}
+/* scrollable products */
+.product{
+  display: flex;
+  overflow: scroll;
+  gap:12px;
+  padding-bottom: 100px;
+}
+.products img{
+  min-width: 250px;
+  border:1px solid var(--border-color);
+}
+.products img:hover{
+  transform:scale(1.05);
+  opacity: 0.7;
+  transition: transform 0.3s;
+}
+/* banner */
+.banners .item{
+  position: relative;
+  background-color: var(--white-color);
+  /* border: 1px solid var(--border-color); */
+}
+.banner .image{
+  text-align: right;
+}
+.banner .get-gray{
+  background-color: var(--border-color);
+}
+/* .banner :where(.textContens, .overLink){
+  position: absolute;
+  top:0;
+  left:0;
+  width: var(--percent100);
+  height: var(--percent100);
+} */
+.banner .textContents{
+  padding: 1.5em 2.5em;
+}
+/* .row .textContents h3,h4{
+  background-color: rgba(229,232,236,0.5);
+  max-width: auto;
+  border-radius: 30px;
+
+} */
+/* .banner h3{
+  font-size: calc(1em+0.5vw);
+  font-weight: var(--fw3);
+} */
+.featuring{
+  text-transform: uppercase;
+  background-color: var(--primary-color);
+  color:var(--white-color);
+  height: 120px;
+  font-size: 200%;
+  padding: 20px;
+  text-align: center;
+}
+.featuring p{
+  animation:more 1s infinite ease-out;
+}
+.banner h3 span{
+  font-size: 80%;
+}
+.flexLastTwo{
+  display: flex;
+}
+.banner .flexLastTwo .textContents{
+  position: relative;
+  z-index: 1;
+  color:var(--primary-color);
+  font-size: 70%;
+  box-shadow: 0 10px 10px 0;
+}
+.flexFirstTwo{
+  display: flex;
+  justify-content: space-between;
+}
+.banner{
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap:2em;
+}
+.banner .flexFirstTwo .textContents{
+  position: relative;
+  z-index: 1;
+  color:var(--secondary-dark-color);
+  font-size: 70%;
+  box-shadow: 0 10px 10px 0;
+}
+@keyframes more{
+  0%{
+    transform: scale(1);
+  }
+  80%{
+    transform: scale(1.05);
+  }
+  100%{
+    transform: scale(1);
+  }
 }

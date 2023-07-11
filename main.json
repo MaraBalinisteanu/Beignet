@@ -1,0 +1,32 @@
+[
+    {
+        "img":"assets/products/clothesW/blouse3.webp",
+        "title":"GUESS: Blouse with floral pattern",
+        "price":"45.99€"
+    },
+    {
+        "img":"assets/products/clothesW/jeans1.webp",
+        "title":"ZARA: Skinny Jeans",
+        "price":"52.99€"
+    },
+    {
+        "img":"assets/products/bags/bag1.webp",
+        "title":"PINKO: Colorful Bag",
+        "price":"145.99€"
+    },
+    {
+        "img":"assets/products/clothesM/han1.webp",
+        "title":"VALENTINO: Beige Hoodie for Men",
+        "price":"103.25"
+    },
+    {
+        "img":"assets/products/shoesM/shoe1.webp",
+        "title":"CALVIN KLEIN Shoes",
+        "price":"99.99€"
+    },
+    {
+        "img":"assets/products/shoesW/sandal.webp",
+        "title":"GUESS: Sandals with Front Aplication",
+        "price":"105.99€"
+    }
+]

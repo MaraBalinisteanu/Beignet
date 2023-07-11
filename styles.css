@@ -334,7 +334,9 @@ h4 {
   .dptMenu .dropDown li a:hover{
     text-decoration: underline;
   }
-
+  .banner .row{
+    flex:0 0 50%;
+  }
   /* slider */
   main .slideshow-container{
     max-width: 60%;
@@ -352,5 +354,49 @@ h4 {
     flex-direction: row;
   }
 
+  /* footer */
+  .newsletter .box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .widgets .row{
+    flex:0 0 33.3333%;
+  }
 
+  .newsletter form{
+    max-width: 500px;
+  }
+  /* banner */
+  .banner .flexLastTwo .textContents.flexcol{
+    /* transform:rotate(-7deg); */
+    position: relative;
+    z-index: 1;
+    bottom:20vh;
+    color:var(--primary-color);
+    font-size: 110%;
+    background-color: rgba(65, 72, 80, 0.3);
+    /* border-radius: 40px; */
+    box-shadow: 0 0 10px 10px;
+  }
+  .flexFirstTwo{
+    display: flex;
+    justify-content: space-between;
+  }
+  .banner{
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:2em;
+  }
+  .banner .flexFirstTwo .textContents.flexcol{
+    position: relative;
+    box-shadow: 0 0 10px 10px;
+    z-index: 1;
+    bottom:54vh;
+    left:5.4vh;
+    color:var(--secondary-dark-color);
+    font-size: 110%;
+    max-width: 87%;
+    background-color: rgba(255,255,255,0.4);
+  }
 }

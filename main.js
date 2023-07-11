@@ -65,3 +65,19 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
+
+function switchScrollable(){
+    const titles = document.querySelectorAll('.imgTitle');
+  const prices = document.querySelectorAll('.currentP');
+  const imgs = document.querySelectorAll('.imgProd');
+fetch('./main.json')
+  .then((res) => res.json())
+  .then((data) => {
+    data.forEach((post, index) => {
+      titles[index].innerHTML = post.title;
+      prices[index].innerHTML = post.price;
+      imgs[index].setAttribute('src', post.img);
+    });
+  });
+}
+switchScrollable()
