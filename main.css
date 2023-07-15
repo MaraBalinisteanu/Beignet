@@ -8,9 +8,11 @@
   max-width: 95%;
   position: relative;
   margin: auto;
-
 }
-
+.slide-container{
+  position: relative;
+  z-index: 1;
+}
 /* Hide the images by default */
 .mySlides {
   display: none;
@@ -52,6 +54,7 @@
   position: absolute;
   justify-content: center;
   left:10px;
+  right: 10px;
   bottom: 20px;
   width: 100%;
   text-align: center;
@@ -77,6 +80,7 @@
 .dot {
   position: relative;
   cursor: pointer;
+  /* right:2%; */
   height: 15px;
   width: 15px;
   margin: 0 2px;
@@ -106,13 +110,29 @@
 .brands .item a:hover img{
   opacity: 1;
 }
+.comingSoon h2{
+  font-size: 2rem;
 
-/* products popular this week */
-.offer, .flexcenter{
-  display: flex;
 }
-.offer{
+.comingSoon{
+  display: flex;
+  justify-content: center;
+  max-height: 200px;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  margin-bottom: 30px;
+  background-color: var(--primary-color);
+  color:var(--white-color);
+}
+.countdown{
+  display: flex;
+  max-width: 600px;
   justify-content: space-around;
+  gap:20px;
+}
+.countDown{
+  display: flex;
 }
 .sectop{
   justify-content: space-between;

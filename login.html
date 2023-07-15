@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="login.css" rel="stylesheet" />
+    <link href="root.css" rel="stylesheet" />
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+  />
+    <script async src="login.js"></script>
+  </head>
+  <body>
+    <div class="signer">
+      <div class="sign-in-sign-up">
+        <div class="login register">
+          <form name="form-register" class="sign-in-form">
+            <h1 class="title">REGISTER</h1>
+            <div class="input-field">
+            <i class="ri-user-line"></i>
+            <input type="email" id="name" placeholder="Enter your email" required /></div>
+            <div class="input-field">
+                <i class="ri-lock-line"></i>
+            <input type="password" id="pw" placeholder="Password" required /></div>
+
+            <ul class="helper-text">
+              <li class="length">Must be at least 8 characters long.</li>
+              <li class="lowercase">Must contain a lowercase letter.</li>
+              <li class="uppercase">Must contain an uppercase letter.</li>
+              <li class="special">
+                Must contain a number or special character.
+              </li>
+            </ul>
+            <input type="button" id="rgstr_btn" value="Sign Up" class="button" />
+
+            <p class="account-text">Already have an account? <a href="#" id="sign-up-btn2">Sign in</a></p>
+          </form>
+        </div>
+
+        <div class="login">
+          <form name="form-login" class="sign-up-form">
+            
+            <h1 class="title">LOG IN</h1>
+            <div class="input-field">
+                <i class="ri-user-line"></i>
+
+            <!-- <label for="userName">Email</label> -->
+            
+            <input type="email" id="userName" placeholder="Username" required /></div>
+            <div class="input-field">
+            <!-- <label for="userPw">Password</label> -->
+            <i class="ri-lock-line"></i>
+            <input
+              type="password"
+              id="userPw"
+              placeholder="Password"
+              required
+            /></div>
+
+            <input type="button" id="login_btn" class="button" value="Login" />
+            <div id="reset-password">
+              <a href="#" id="reset-link">Forgot Password?</a>
+              
+              <div id="reset-form" style="display: none">
+                <!-- <i class="ri-user-line"></i> -->
+                <input
+                  type="email"
+                  id="resetEmail"
+                  placeholder="Email"
+                  required
+                />
+
+                <div id="new-password" style="display: none">
+                  <!-- <i class="ri-lock-line"></i> -->
+                  <input
+                    type="password"
+                    id="newPw"
+                    placeholder="New Password"
+                    required
+                  />
+                </div>
+
+                <input type="button" id="reset_btn" value="Reset Password" />
+              </div>
+            </div>
+            <p class="account-text">Don't have an account? <a href="#" id="sign-in-btn2">Sign up</a></p>
+          </form>
+        </div>
+      </div>
+      <div class="panels-container">
+        <div class="panel left-panel">
+            <div class="content">
+                <h3>Welcome back!</h3>
+                <p>To keep connected with us please login to your personal account<br> Don't have an account?<strong>Click</strong>below</p>
+                <button id="sign-in-btn" class="button">Sign in</button>
+            </div>
+            <img src="assets/signer/nr4.svg" alt="signin" class="image">
+        </div>
+        <div class="panel right-panel">
+            <div class="content">
+                <h3>Hello Friend!</h3>
+                <p>Enter you personal detail and start your journey with us! <br> Already have an account?<strong>Click</strong>below</p>
+                <button id="sign-up-btn" class="button">Sign up</button>
+            </div>
+            <img src="assets/signer/nr2.svg" alt="login" class="image">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

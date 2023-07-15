@@ -1,4 +1,10 @@
+.wrapper .box .content h3{
+    border-bottom: 2px solid var(--secondary-dark-color);
+    max-width: 250px;
+    padding-left: 25px;
+}
 .newsletter{
+    margin-top:20px;
     padding: 2.5em 0;
     background-color: var(--btn-color);
     color:var(--dark-color);
@@ -14,6 +20,20 @@
 .newsletter form{
     /* max-width: 500px; */
     width: var(--percent100);
+}
+.newsletter .row:first-child{
+    justify-content: center;
+    display: flex;
+}
+.row .item .flexcol .miniItem{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: 250px;
+}
+.row .item .flexcol i{
+    display: flex;
+    justify-content: center;
 }
 .widgets{
     padding-top: 20x;

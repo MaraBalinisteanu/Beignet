@@ -118,6 +118,9 @@ nav .flyItem{
     margin-bottom: 2em;
 }
 .dptCat{
+    display: block;
+}
+.dptCat{
     position: relative;
     z-index: 1;
 }
@@ -200,17 +203,17 @@ form.search button:hover{
     height: var(--percent100);
     background-color: var(--white-color);
     overflow-y: auto;
-    z-index: 200;
+    z-index: 2000;
     transform: translateX(-100%);
-    /* visibility: hidden; */
-    display: none;
+    visibility: hidden;
+    /* display: none; */
     transition: transform .4s, visibility .4s;
     will-change: transform, visibility;
 }
 .showmenu .siteOff{
     transform: translateX(0);
-    /* visibility: visible; */
-    display: block;
+    visibility: visible;
+    /* display: block; */
     transform: transform .4s 0s, visibility 0s 0s;
 }
 .offCanvas{
@@ -307,4 +310,163 @@ form.search button:hover{
     border: 1px solid var(--border-color);
     line-height: 15px;
     margin: 0 0.5em 0.5em 0;
+}
+/* menu2 */
+.slide-container {
+    position: relative;
+    z-index: 1;
+  }
+  
+
+header .miniMenu{
+    /* max-width:500px; */
+    /* background-color: var(--secondary-color); */
+    /* opacity: 0.9; */
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding:0 100px;
+    display: none;
+}
+.miniMenu .hamburger .nav-bar ul li{
+    color:var(--secondary-dark-color)
+}
+header .miniMenu .logo .detail{
+    color:var(--detail-color);
+    opacity: 0.8;
+    left:10px;
+    width:110px;
+    height: 25px;
+}
+header .miniMenu .logo {
+    font-size: 10px;
+}
+.hamburger{
+    display: none;
+}
+.nav-bar{
+
+    max-width: 100%;
+    /* border-radius: 20px; */
+
+}
+.nav-bar ul{
+    display: flex;
+    position: relative;
+    bottom:52%;
+}
+.nav-bar ul li a{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:var(--secondary-dark-color);
+    font-size: 15px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    transition: 0.2s;
+    margin:0 5px;
+}
+.nav-bar ul li a:hover{
+    color: var(--secondary-color);
+    background-color: var(--btn-color);
+    /* opacity: 0.8; */
+}
+.nav-bar ul li a.active{
+    color: var(--secondary-dark-color);
+    background-color: var(--border-color);
+}
+.miniMenu .login:hover{
+    color:var(--secondary-color)
+}
+/* menu2 */
+@media only screen and (max-width: 1320px){
+    header .miniMenu{
+        padding: 0 50px;
+    }
+}
+@media only screen and (max-width: 1100px){
+    header .miniMenu{
+        padding: 0 30px;
+        position: relative;
+        z-index: 2;
+    }
+}
+@media only screen and (max-width: 991px){
+    .miniMenu{
+        margin: 2.5%;}
+    .login{
+        font-weight: var(--fw7);
+    }
+    header .miniMenu{
+        display: flex;
+        z-index: 3900;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .hamburger{
+        display: block;
+        cursor: pointer;
+        z-index: 10000;
+    }
+    .hamburger i.ri-menu-line{
+        width:50px;
+        height: 30px;
+        color: var(--dark-color);
+        margin: 6px 0;
+    }
+    .nav-bar{
+        height: 0px;
+        position: absolute;
+        top:38px;
+        left:0;
+        right: 0;
+        width: 100vw;
+        background-color: var(--white-color);
+        transition: 0.2s;
+        overflow: hidden;
+        /* opacity: 0.9; */
+        flex-wrap: wrap;
+    }
+    .nav-bar.actively{
+        height: 600px;
+        z-index: 3;
+    }
+    .nav-bar ul{
+        display: flex;
+        flex-direction: column;
+        /* max-width: 50%; */
+        margin-top:350px;
+        text-align: center;
+        transition: 0.5s;
+        opacity: 0;
+        justify-content: flex-start;
+    }
+    .nav-bar.actively ul{
+        opacity: 1;
+    }
+    .nav-bar ul:last-child .last{
+        padding-top:0;
+        margin-top: 250px;
+
+    }
+    .nav-bar ul li a{
+        margin-bottom: 12px;
+   
+}
+.nav-bar ul li:first-child{
+    font-weight: var(--fw7);
+    color: azure;
+    border-bottom: 1px solid white;
+}
+.nav-bar ul li:nth-child(7) ul{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom:240px;
+}
+.nav-bar ul li:nth-child(7) a:hover li{
+    color:var(--secondary-dark-color)
+}
 }

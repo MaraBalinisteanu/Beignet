@@ -28,5 +28,10 @@
         "img":"assets/products/shoesW/sandal.webp",
         "title":"GUESS: Sandals with Front Aplication",
         "price":"105.99€"
+    },
+    {
+        "img":"assets/products/kids/fete/tshirt1.webp",
+        "title":"VANS: Girls T-Shirt with Front Heart Aplication",
+        "price":"39.99€"
     }
 ]
