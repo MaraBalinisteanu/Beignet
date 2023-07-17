@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="header.css " />
     <link rel="stylesheet" href="root.css" />
     <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="product.css">
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
       rel="stylesheet"
@@ -16,6 +17,7 @@
     <link rel="stylesheet" href="main.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
     <script async src="main.js"></script>
+    <script async src="products.js"></script>
   </head>
   <body>
     <div id="page" class="site">
@@ -334,6 +336,13 @@
           <nav class="nav-bar">
           <ul>
             <li>
+                <form action="" class="search">
+                    <span class="iconLarge"><i class="ri-search-line"></i></span>
+                    <input type="search" placeholder="Look for your Products">
+                    <button type="submit">Search</button>
+                  </form>
+            </li>
+            <li>
                 <div style="color:var(--secondary-dark-color)">All Products: 1256 Products</div>
                 
             </li>
@@ -388,7 +397,7 @@
         <div class="headerMain mobileHide">
           <div class="container">
             <div class="wrapper flexItem">
-              <div class="left">
+              <div class="left"  style="display: none;">
                 <div class="dptCat">
                   <div class="dptHead">
                     <div class="mainText">View All Products</div>
@@ -462,209 +471,68 @@
       <main>
         <!-- slider -->
         <div class="slide-container">
-        <div class="slideshow-container">
-
-          <!-- Full-width images with number and caption text -->
-          <div class="mySlides fade">
-            <img src="assets/slider/slider2.1.webp" alt="sliderImg">
-            <div class="text">Discover the new goodies of the week! <br>
-              <button class="sliderBtn">Shop now</button>
-            </div>
-          </div>
-        
-          <div class="mySlides fade">
-            <img src="assets/slider/slider0.jpeg" alt="sliderImg">
-            <div class="text">up to 70% off selected items  <br>
-              <button class="sliderBtn">Shop now</button>
-            </div>
-          </div>
-
-          <div class="mySlides fade">
-            <img src="assets/banner/bags.webp" alt="sliderImg">
-            <div class="text">Stop wishing, start enjoying!  <br>
-              <button class="sliderBtn">Shop now</button>
-            </div>
-          </div>
-        
-          <!-- Next and previous buttons -->
-          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-          <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </div>
-      </div>
-        <br>
-        
-        <!-- The dots/circles -->
-        <div style="text-align:center">
-          <span class="dot" onclick="currentSlide(1)"></span>
-          <span class="dot" onclick="currentSlide(2)"></span>
-          <span class="dot" onclick="currentSlide(3)"></span>
-        </div>
-
-        <!-- brands -->
-        <div class="brands">
-          <div class="container">
-            <div class="wrapper flexItem">
-              <div class="item"><a href=""><img src='assets/brands/Calvin-Klein.png' alt="brandImg"></a></div>
-              <div class="item"><a href=""><img src='assets/brands/cartier-logo.png' alt="brandImg"></a></div>
-              <div class="item"><a href=""><img src='assets/brands/Gucci.png' alt="brandImg"></a></div>
-              <div class="item"><a href=""><img src='assets/brands/GUESS-Logo.png' alt="brandImg"></a></div>
-              <div class="item"><a href=""><img src='assets/brands/ysl.png' alt="brandImg"></a></div>
-              <div class="item"><a href=""><img src='assets/brands/zara.png' alt="brandImg"></a></div>
-            </div>
-          </div>
-        </div>
-        <!-- trending products -->
-        <div class="trending">
-          <div class="container">
-            <div class="wrapper ">
-              <div class="sectop flexItem">
-                <h2>
-                  <span class="detail"></span>
-                  <span>Most Popular this Week </span></h2>
+            <div class="slideshow-container">
+              <!-- Full-width images with number and caption text -->
+              <div class="mySlides fade">
+                <img src="assets/circle-scatter-haikei (1).svg" alt="sliderImg">
+                <div class="text">3, 2, 1, start!<br></div>
               </div>
-              <div class="column">
-<!-- countdown -->
-                <section class="comingSoon">
-                  <h2>Offer expires in:</h2>
-                  <div class="countdown">
-                  <div class="containerDay">
-                    <h3 class="day"></h3>
-                    <h3>d</h3>
-                  </div>
-                  <div class="containerHour">
-                    <h3 class="hour"></h3>
-                    <h3>h</h3>
-                  </div>
-                  <div class="containerMinute">
-                    <h3 class="minute"></h3>
-                    <h3>m</h3>
-                  </div>
-                  <div class="containerSec">
-                    <h3 class="sec"></h3>
-                    <h3>s</h3>
-                  </div>
-                </div>
-                </section>
-                
-                <div class="flexwrap">
-                  <div class="row products mini">
-                    <div class="item">
-                      <div class="media">
-                        <div class="image">
-                          <a href="">
-                            <img src="assets/products/clothesW/dress1.webp" alt="promotedProduct"></a>
-                          </div>
-                          <h3 class="mainLinks"><a href="">GUESS: White lateral cutouts short Dress</a></h3>
-                          <div class="hoverable">
-
-                            <ul>
-                              <li class="activity"><a href=""></a><i class='ri-heart-line'></i></li>
-                              <li><a href=""></a><i class='ri-eye-line'></i></li>
-                              <li><a href=""></a><i class='ri-shuffle-line'></i></li>
-                            </ul>
-                          </div>
-                          <div class="discount circle flexcenter"><span>Discount: 53.5%</span></div>
-                      </div>
-                      <div class="content">
-                        <div class="rating">
-                          <div class="stars"></div>
-                          <div class="miniText">(892)</div>
-                        </div>
-
-                        <div class="price">
-                          <span class="current">90.99€</span>
-
-                          <span class="normal miniText">169.99€</span>
-                          <div class="cut"></div>
-                        </div>
-                        <div class="miniText">
-                          <p>Free shipping on orders over 99.99€</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="sectop"></div>
-                  </div>
-                  <div class="row products mini">
-                    <div class="item">
-                      <div class="media">
-                        <div class="image">
-                          <a href="">
-                            <img src="assets/products/clothesM/camasa1.webp" alt="promotedProductMini"></a>
-                          </div>
-                          <h3 class="mainLinks"><a href="">TOMMY HILFIGER: Srtipped linen short sleeves Shirt</a></h3>
-                          <div class="hoverable">
-                            
-                            <ul>
-                              <li class="activity"><a href=""></a><i class='ri-heart-line'></i></li>
-                              <li><a href=""></a><i class='ri-eye-line'></i></li>
-                              <li><a href=""></a><i class='ri-shuffle-line'></i></li>
-                            </ul>
-                          </div>
-                          <div class="discount circle flexcenter"><span>Discount: 40%</span></div>
-                      </div>
-                      <div class="content">
-                        <div class="rating">
-                          <div class="stars"></div>
-                          <div class="miniText">(771)</div>
-                        </div>
-                        <div class="price">
-                          <span class="current">89.99€</span>
-                          <span class="normal miniText">149.99€</span>
-                          <div class="cut"></div>
-                        </div>
-                        <div class="miniText">
-                          <p>Free shipping on orders over 99.99€</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="sectop"></div>
-                  </div>
-                  <div class="row products mini">
-                    <div class="item">
-                      <div class="media">
-                        <div class="image">
-                          <a href="">
-                            <img src="assets/products/kids/baieti/pant1.webp" alt="promotedProductMini"></a>
-                          </div>
-                          <h3 class="mainLinks"><a href="">ZARA: Boys cargo Pants</a></h3>
-                          <div class="hoverable">
-                            <ul>
-                              <li class="activity"><a href=""></a><i class='ri-heart-line'></i></li>
-                              <li><a href=""></a><i class='ri-eye-line'></i></li>
-                              <li><a href=""></a><i class='ri-shuffle-line'></i></li>
-                            </ul>
-                          </div>
-                          <div class="discount circle flexcenter"><span>Discount: 37%</span></div>
-                      </div>
-                      <div class="content">
-
-                        <div class="rating">
-                          <div class="stars"></div>
-                          <div class="miniText">(283)</div>
-                        </div>
-                        <div class="price">
-                          <span class="current">40.95€</span>
-                          <span class="normal miniText">64.99€</span>
-                          <div class="cut"></div>
-                        </div>
-                        <div class="miniText">
-                          <p>Free shipping on orders over 99.99€</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="sectop"></div>
-                  </div>
-                </div>
-             </div>
+            </div>
+            <!-- The dots/circles -->
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)" style="visibility: hidden;"></span>
+              <span class="dot" onclick="currentSlide(2)" style="visibility: hidden;"></span>
+              <span class="dot" onclick="currentSlide(3)" style="visibility: hidden;"></span>
+            </div>
           </div>
-        </div>
+        
+          <!-- trending products -->
+          
+          <div class="all-prod-filter">
+
+            <div id="filterSection">
+                <h4>Filter by category<i class="ri-equalizer-line"></i> <br>
+                </h4>                
+                <button id="all" class="category-button" onclick="filterProducts('all')">All</button>
+                <button id='women-clothing'class="category-button" onclick="filterProducts('women-clothing')">Women Clothing</button>
+                <button id="women-shoes" class="category-button" onclick="filterProducts('women-shoes')">Women Shoes</button>  
+
+                <button id="men-clothing" class="category-button" onclick="filterProducts('men-clothing')">Men Clothing</button>
+
+                <button id="kids-f" class="category-button" onclick="filterProducts('kids-f')">Girls</button>
+                <button id="kids-b" class="category-button" onclick="filterProducts('kids-b')">Boys</button>                    
+
+                <button id="bags" class="category-button" onclick="filterProducts('bags')">Bags</button>
+            </div>
+              <div id="filterSection">
+                <h4>Filter by Price <i class="ri-cash-line"></i></h4>
+                <button class="marja-button" onclick="filterProducts('all')">All</button>
+                <button  data-marja="p10"  class="marja-button" onclick="filterProductsByMarja('p10')">Less than 10€</button>
+                <button data-marja="p20"  class="marja-button" onclick="filterProductsByMarja('p20')">10€-20€</button>
+                <button data-marja="p30"  class="marja-button" onclick="filterProductsByMarja('p30')">20€-30€</button>
+                <button data-marja="p40" class="marja-button" onclick="filterProductsByMarja('p40')">40€-50€</button>
+                <button data-marja="p50"  class="marja-button" onclick="filterProductsByMarja('p50')">More than 50€</button>
+              </div> 
+            <div class="products-page">
+            <ul id="productList">
+
+            </ul>
+            
+          </div>
+
+          </div>
+          <div id="productListContainer"></div>
+
+        <div id="paginationContainer"></div>
+
+
         <!-- scrollable new products -->
-        <div class="scrollable">
+        <div class="scrollable" style="display:none">
           <div class="container">
             <div class="sectop flexItem">
               <h2>
                 <span class="detail"></span>
-                <span>Fresh and Fine </span></h2>
+                <span>You might also Like </span></h2>
             </div>
             <div class="product">
               <div class="products">
@@ -720,75 +588,7 @@
             </div>
           </div>
         </div>
-        <div class="featuring"><p>Epic sale up to 70%discount</p></div>
-        <br>
-        <div class="banners">
-          <div class="container">
-            <div class="wrapper">
-              <div class="column">
-                <div class="banner flexwrap">
-                  <div class="flexFirstTwo">
-                    <div class="row">
-                      <div class="item">
-                        <div class="image">
-                          <img src="assets/banner/banner-women.jpeg">
-                        </div>
-                        <div class="textContents flexcol">
-                            <h1>Hottest Deals in Town</h1>
-                            <h3>The Clock is ticking for your Closet</h3>
-                            <a href="" class="prymaryBtn"></a>
-                        </div>
-                        <a href="" class="overLink"></a>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="item">
-                        <div class="image">
-                          <img src="assets/banner/banner-man.webp">
-                        </div>
-                        <div class="textContents flexcol">
-                            <h1>Be Your Most Fashionable Self</h1>
-                            <h3>Start Wanting <stron>More</stron></h3>
-                            <a href="" class="prymaryBtn"></a>
-                        </div>
-                        <a href="" class="overLink"></a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="flexLastTwo">
-                    <div class="row">
-                      <div class="item">
-                        <div class="image">
-                          <img src="assets/banner/banner-kids.jpeg">
-                        </div>
-                        <div class="textContents flexcol">
-                            <h1>New Deals Every Week</h1>
-                            <h3>Up to 60% Discount</h3>
-                            <a href="" class="prymaryBtn"></a>
-                        </div>
-                        <a href="" class="overLink"></a>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="item">
-                        <div class="image">
-                          <img src="assets/banner/shoes.jpeg">
-                        </div>
-                        <div class="textContents flexcol">
-                            <h1>Your Snickers never looked Better</h1>
-                            <h3>Walking feels Better with Every Step</h3>
-                            <a href="" class="prymaryBtn"></a>
-                        </div>
-                        <a href="" class="overLink"></a>
-                      </div>
-                    </div>
-                  </div>
-                  
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        
       </main>
       <footer>
         <div class="newsletter">

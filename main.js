@@ -14,42 +14,6 @@
     const topPlace=document.querySelector('.offCanvas .topNav');
     topPlace.innerHTML=topNav.innerHTML;
 
-// menu on mobile showing
-// const menuBtn = document.querySelector('.trigger');
-// const closeBtn = document.querySelector('.tClose');
-// const addclass = document.querySelector('.site');
-
-// menuBtn.addEventListener('click', function() {
-//   addclass.classList.toggle('showmenu');
-// });
-
-// closeBtn.addEventListener('click', function() {
-//   addclass.classList.remove('showmenu');
-// });
-
-//subMenu showing on mobile
-// const submenu = document.querySelectorAll('.dropDown .iconSmall');
-// submenu.forEach(function(menu) {
-//   menu.addEventListener('click', function(e) {
-//     e.preventDefault();
-//     submenu.forEach(function(item) {
-//       if (item !== menu) {
-//         item.closest('.dropDown').classList.remove('expand');
-//       }
-//     });
-//     if (menu.closest('.dropDown').classList !== 'expand') {
-//       menu.closest('.dropDown').classList.toggle('expand');
-//     }
-//   });
-// });
-// const submenu = document.querySelectorAll('.dropDown .iconSmall');
-// submenu.forEach((menu)=>menu.addEventListener('click', toggle));
-// function toggle(e){
-//   e.preventDefault();
-//   submenu.forEach((item)=>item != this? item.closest('.dropDown').classList.remove('expand'):null)
-//   if (this.closest('.dropDown').classList !='expand');
-//   this.closest('dropDown').classList.toggle('expand')
-// }
 
 //Slider-carousel
 
