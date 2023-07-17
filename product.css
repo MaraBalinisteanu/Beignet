@@ -236,7 +236,7 @@ div.text{
       gap:0;
      }
      #filterSection h4,button{
-       font-size: 8px;
+       font-size: 10px;
       }
 }
 @media screen and (max-width:625px){
@@ -247,6 +247,6 @@ div.text{
    gap:3px;
   }
   #filterSection h4,button{
-    font-size: 8px;
+    font-size: 15px;
    }
 }

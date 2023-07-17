@@ -1,18 +1,18 @@
 //menu mobile
     //copy dptCat to departments
-    const dptCategory= document.querySelector('.dptCat');
-    const dptPlace=document.querySelector('.departments');
-    dptPlace.innerHTML=dptCategory.innerHTML;
+    // const dptCategory= document.querySelector('.dptCat');
+    // const dptPlace=document.querySelector('.departments');
+    // dptPlace.innerHTML=dptCategory.innerHTML;
     
-    //copy nav to nav
-    const miniNav=document.querySelector('.headerNav nav');
-    const navPlace=document.querySelector('.offCanvas nav');
-    navPlace.innerHTML=miniNav.innerHTML
+    // //copy nav to nav
+    // const miniNav=document.querySelector('.headerNav nav');
+    // const navPlace=document.querySelector('.offCanvas nav');
+    // navPlace.innerHTML=miniNav.innerHTML
 
-    //copy .headerTop to .topNav
-    const topNav=document.querySelector('.headerTop .wrapper');
-    const topPlace=document.querySelector('.offCanvas .topNav');
-    topPlace.innerHTML=topNav.innerHTML;
+    // //copy .headerTop to .topNav
+    // const topNav=document.querySelector('.headerTop .wrapper');
+    // const topPlace=document.querySelector('.offCanvas .topNav');
+    // topPlace.innerHTML=topNav.innerHTML;
 
 
 //Slider-carousel
