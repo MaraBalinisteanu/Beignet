@@ -285,7 +285,7 @@
 
 
     </div>      
-    <div class="right">
+    <!-- <div class="right">
         <ul class="flexItem secondLinks">
             <li><a href='cart.html' class="iscart">
                 <div class="iconLarge">
@@ -299,12 +299,9 @@
                     </div>
                 </div>
             </a></li>
-            <li class="mobileHide"><a href=''>
-                <div class="iconLarge"><i class="ri-heart-line"></i></div>
-                <div class="flyItem"><span class="itemNumber">0</span></div>
-            </a></li>
+            
         </ul>
-      </div>
+      </div> -->
     </nav>
 </div>   
 </div>
@@ -371,11 +368,135 @@
 </div>
 
 </header> 
-      <div class="shopping"><h1>Shopping Cart</h1>  
-    <div class="cart-container" id="cartContainer"></div>
-      
+    <div class="shopping">
+        
+        <div class="h1img">
 
-    <script src="cart.js"></script>
+        <img src="assets/addtocart.svg" class="cartImg"><h1>Shopping Cart</h1>  
+    </div>
+    <div class="cart-container" id="cartContainer"></div>
+    <div class="right">
+        <ul class="flexItem secondLinks">
+            <li><a href='cart.html' class="iscart">
+                <div class="iconLarge">
+                    <!-- <i class="ri-shopping-cart-line"></i> -->
+                    <div class="flyItem"><span class="itemNumber">0</span></div>
+                </div>
+                <div class="iconText">
+                    <div class="miniText">Total</div>
+                    <div class="cartTotal">
+                      
+                    </div>
+                </div>
+            </a></li>
+            
+        </ul>
+      </div>
+    </div>   <!-- <div class="cartTotalInBody"></div> -->
+      <div class="order">
+        <div class="place">
+            <h3>Place your Order</h3>
+        <a href=""><button>Checkout</button></a>
+    </div>
+        <div class="back">
+            <h4>Back to the Store</h4>
+        <a href="http://127.0.0.1:5501/products.html"><button>Store</button></a>
+    </div>
+        
+      </div>
+
+
+
+      <footer>
+        <div class="newsletter">
+          <div class="container">
+            <div class="wrapper">
+              <div class="box">
+                <div class="content">
+                  <h3>Join our Newsletter</h3>
+                  <h4>And be the First One to hear about our Top <strong>Offers</strong> and <strong>Deals of the Week</strong></h4>
+                </div>
+                <form action="" class="search">
+                  <span class="icon-large"><i class="ri-mai-line"></i></span>
+                  <input type='mail' placeholder="Enter your email address" required>
+                  <button type="submit">Sign up</button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+        <div class="widgets">
+          <div class="container">
+            <div class="wrapper">
+              <div class="flexwrap">
+                <div class="row">
+                  <div class="item miniLinks">
+                    <h4>About Us</h4>
+                    <div class="line1"></div>
+                    <ul class="flexcol">
+                      <li><a href="">Company Info</a></li>
+                      <li><a href="">News</a></li>
+                      <li><a href="">Careers</a></li>
+                      <li><a href="">Q & A</a></li>
+                      <li><a href="">Return Policies</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="item miniLinks">
+                    <h4>Follow Us on Our Social Media Platforms</h4>
+                    <div class="line2"></div>
+                    <div class="flexcol">
+                      <div class="miniItem"><a href="">
+                        <i class="ri-instagram-line"></i>
+                      </a>
+                    <div>Instagram</div>
+                    </div>
+                      <div class="miniItem"><a href="">
+                        <i class="ri-facebook-circle-line"></i>
+                      </a>
+                    <div>Facebook</div>
+                    </div>
+                      <div  class="miniItem"><a href="">
+                        <i class="ri-twitter-line">
+                        </i>
+                      </a>                    <div>Twitter</div></div>
+                      <div class="miniItem"><a href="">
+                        <i class="ri-youtube-line"></i>
+                      </a>                    <div>YouTube</div></div>
+                      <div class="miniItem"><a href="">
+                        <i class="ri-tiktok-line"></i>
+                      </a>                    <div>TikTok</div></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="item miniLinks">
+                    <h4>Customer Services</h4>
+                    <div class="line3"></div>
+                    <ul class="flexcol">
+                      <li><p>0750(000)(000) / 0212(000)(000)</p></li>
+                      <li><p>Monday-Friday: 07:30-22:00 </p></li>
+                      <li><p>Saturday: 08:00-18:00</p></li>
+                      <li><p>Sunday: 09:00-17:00</p></li>
+                      <!-- <li><h4>Don't hesitate to contact us whenever in need</h4></li> -->
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="final">
+        <div class="logo">
+          <a href=""><span class="detail"></span>Beignet</a></div>
+        <h3>We are Here for <strong>You</strong>!</h3>
+      </div>
+      </footer>
+    
+    
+      <script src="cart.js"></script>
     <script>
         // Use DOMContentLoaded event to call displayCartItems() after the DOM is ready
         document.addEventListener("DOMContentLoaded", function() {

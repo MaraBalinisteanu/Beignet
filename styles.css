@@ -535,3 +535,132 @@ button.normal:hover{
   font-weight: var(--fw7);
 }
 }
+
+
+/* CART */
+.cart-container{
+  width:90%;
+  position: relative;
+  left:5%;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* justify-content: center; */
+
+}
+.cart-container .cart-item{
+  width:100%;
+  height:100px;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  margin:10px;
+  padding:10px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 10px;
+}
+.cart-container img{
+  width:auto;
+  height:80px;
+  /* padding-left: 20px; */
+}
+.cart-container img:hover{
+  opacity: 0.6;
+  transform: scale(1.1);
+  transition:0.3s;
+}
+.cart-container .nameContainer:hover{
+  color:var(--secondary-dark-color);
+  font-weight: var(--fw7);
+  transition: 0.3s;
+}
+.cart-container input{
+  width:70px;
+  height: 40px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  text-align: center;
+}
+.cart-container .priceContainer, .cart-container .nameContainer{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.shopping{
+  margin-top: 50px;
+}
+.shopping .flexItem{
+  justify-content: flex-end;
+  width:95%;
+  margin-top: 10px;
+  margin-bottom: 150px;
+}
+
+.cartTotal{
+  display: flex;
+  justify-content: center;
+}
+.shopping .iconText .miniText{
+  font-weight: var(--fw8);
+  font-size: 15px;
+  border-bottom: 2px solid var(--secondary-color);
+  width:200px;
+  display: flex;
+  justify-content: center;
+}
+
+.shopping .cartImg{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+}
+.h1img{
+  display: flex;
+  /* flex-direction: column; */
+  max-width: 90%;
+  position: relative;
+  left:10%;
+}
+.h1img h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:50%;
+  color: var(--secondary-dark-color);
+}
+.order{
+  max-width: 90%;
+  position: relative;
+  left: 5%;
+}
+.order .place, .order .back{
+  display: flex;
+}
+.order button{
+  margin-left: 50px;
+  width:100px;
+  height: 35px;
+  border-radius: 30px;
+  border:1px solid var(--border-color);
+  background-color: var(--btn-color);
+  font-family: 'Rubik', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-transform: uppercase;
+  font-weight: var(--fw5);
+  text-align: center;
+  cursor: pointer;
+}
+.order button:hover{
+  background-color: var(--secondary-color);
+  color: var(--white-color);
+  width: 110px;
+  height: 40px;
+  transition: 0.4s;
+}
+.order .back{
+  margin-top: 40px;
+  margin-bottom: 80px;
+}

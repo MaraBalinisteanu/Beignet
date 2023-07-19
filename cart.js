@@ -460,7 +460,9 @@ const products = [
   },
 ];
 
-
+window.addEventListener("beforeunload", function () {
+  updateCartIconAndTotal();
+});
 // form sproducts.js
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -485,22 +487,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-function addToCart() {
+  function addToCart() {
 
-  console.log("addToCart function called!");
-  const productIndex = getQueryParam("index");
-  const selectedProduct = products[productIndex];
-  console.log("Selected Product:", selectedProduct);
-
-  // Get the current cart items from local storage
-  let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-
-  // Check if the selected product is already in the cart
-  const existingItemIndex = cartItems.findIndex(
-    (item) => item.id === selectedProduct.id 
-  );
- 
-  if (existingItemIndex !== 0) {
+    console.log("addToCart function called!");
+    const productIndex = getQueryParam("index");
+    const selectedProduct = products[productIndex];
+    console.log("Product Index:", productIndex);
+    console.log("Selected Product:", selectedProduct);
+  
+    // Get the current cart items from local storage
+    let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+  
+    // Check if the selected product is already in the cart
+    const existingItemIndex = cartItems.findIndex(
+      (item) => item.id === selectedProduct.id
+    );
+  console.log('existing item index', existingItemIndex)
+  if (existingItemIndex >= 0) {
     // If the product is already in the cart, update its quantity
     cartItems[existingItemIndex].quantity =
       parseInt(cartItems[existingItemIndex].quantity) + 1;
@@ -518,11 +521,11 @@ function addToCart() {
   console.log("Cart Items:", cartItems);
   // Save the updated cart items to local storage
   localStorage.setItem("cartItems", JSON.stringify(cartItems));
-
+  
   // Update the cart icon and total price
   updateCartIconAndTotal();
-
-}
+  displayCartItems();
+  }
 
 // Function to update the cart icon and total price in the header
 function updateCartIconAndTotal() {
@@ -559,6 +562,7 @@ function parsePrice(priceString) {
   return parsedValue;
 }
 updateCartIconAndTotal();
+displayCartItems();
 })
 
 
@@ -587,12 +591,51 @@ function updateCartItemQuantity(itemId, newQuantity) {
 
     // After updating the quantity, update the cart icon and total price
     updateCartIconAndTotal();
+
   }
 }
 
 
 
 console.log("Displaying cart items...1");
+
+
+  function updateCartIconAndTotal() {
+    const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+    const cartIcon = document.querySelector(".ri-shopping-cart-line");
+    const itemNumber = document.querySelector(".itemNumber");
+    const cartTotal = document.querySelector(".cartTotal");
+    const cartTotalBody=document.getElementById('cardTotal');
+  
+    console.log("Cart Items Array:", cartItems);
+  
+    const total = cartItems.reduce((acc, item) => {
+      const itemPrice = parseFloat(item.price);
+      const itemQuantity = parseInt(item.quantity);
+      console.log(
+        `Item: ${item.name}, Price: ${itemPrice}, Quantity: ${itemQuantity}`
+      );
+      return acc + itemPrice * itemQuantity;
+    }, 0);
+    // Update the cart icon with the number of items in the cart
+    itemNumber.textContent = cartItems.reduce(
+      (acc, item) => acc + item.quantity,
+      0
+    );
+  
+    // Update the cart total price
+    cartTotal.textContent = total.toFixed(2) + " EURO";
+    cartTotalBody.textContent='TOTAL' + total.toFixed(2) + " EURO";
+  }
+  // function parsePrice(priceString) {
+  //   const numericPrice = priceString.replace(/[^\d.,]/g, "").replace(",", ".");
+  //   const parsedValue = parseFloat(numericPrice);
+  //   console.log(
+  //     `Input Price: ${priceString}, Numeric Price: ${numericPrice}, Parsed Value: ${parsedValue}`
+  //   );
+  //   return parsedValue;
+  // }
+  // updateCartIconAndTotal();
 function displayCartItems() {
     console.log("Displaying cart items...");
     const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
@@ -600,6 +643,19 @@ function displayCartItems() {
   
     // Clear the existing content in the cart container
     cartContainer.innerHTML = "";
+
+
+    const total = cartItems.reduce((acc, item) => {
+      const itemPrice = parseFloat(item.price);
+      const itemQuantity = parseInt(item.quantity);
+      console.log(`Item: ${item.name}, Price: ${itemPrice}, Quantity: ${itemQuantity}`);
+      return acc + itemPrice * itemQuantity;
+    }, 0);
+  
+    // Update the cart total in the body
+    // const cartTotalInBody = document.querySelector(".cartTotalInBody");
+    // cartTotalInBody.textContent = 'TOTAL: '+ total.toFixed(2) + " EURO";
+    // cartTotalInBody.classList='total'
   
     // Loop through each item in the cart and create elements to display them
     cartItems.forEach((item) => {
@@ -615,6 +671,7 @@ function displayCartItems() {
       // Product name
       const nameElement = document.createElement("div");
       nameElement.textContent = item.name;
+      nameElement.classList='nameContainer'
       cartItemDiv.appendChild(nameElement);
   
       // Product quantity
@@ -637,52 +694,17 @@ function displayCartItems() {
       });
       cartItemDiv.appendChild(quantityElement);
   
-      // Product size
-      const sizeElement = document.createElement("div");
-      sizeElement.textContent = item.size;
-      cartItemDiv.appendChild(sizeElement);
+      // Product price
+      const priceElement = document.createElement("div");
+      priceElement.textContent = item.price + ' EURO';
+      priceElement.classList = 'priceContainer'
+      cartItemDiv.appendChild(priceElement);
 
       // Add the cart item div to the cart container
       cartContainer.appendChild(cartItemDiv);
     });
   }
   console.log(products)
-
-
-  function updateCartIconAndTotal() {
-    const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-    const cartIcon = document.querySelector(".ri-shopping-cart-line");
-    const itemNumber = document.querySelector(".itemNumber");
-    const cartTotal = document.querySelector(".cartTotal");
-  
-    console.log("Cart Items Array:", cartItems);
-  
-    const total = cartItems.reduce((acc, item) => {
-      const itemPrice = parseFloat(item.price);
-      const itemQuantity = parseInt(item.quantity);
-      console.log(
-        `Item: ${item.name}, Price: ${itemPrice}, Quantity: ${itemQuantity}`
-      );
-      return acc + itemPrice * itemQuantity;
-    }, 0);
-    // Update the cart icon with the number of items in the cart
-    itemNumber.textContent = cartItems.reduce(
-      (acc, item) => acc + item.quantity,
-      0
-    );
-  
-    // Update the cart total price
-    cartTotal.textContent = total.toFixed(2) + " EURO";
-  }
-  function parsePrice(priceString) {
-    const numericPrice = priceString.replace(/[^\d.,]/g, "").replace(",", ".");
-    const parsedValue = parseFloat(numericPrice);
-    console.log(
-      `Input Price: ${priceString}, Numeric Price: ${numericPrice}, Parsed Value: ${parsedValue}`
-    );
-    return parsedValue;
-  }
-  updateCartIconAndTotal();
 
 
   const hamburger = document.querySelector(".hamburger");
