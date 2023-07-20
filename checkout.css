@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Rubik:wght@300;400;500;600&display=swap");
+*{
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    padding: 3%;
+}
+#msform{
+    display: flex;
+    border:2px solid var(--secondary-color);
+}
+#msform fieldset:first-of-type{
+    display: flex;
+    flex-direction: column;
+    width:50%;
+}
+#msform fieldset h2:hover, #msform fieldset h3:hover, .payment-method h2:hover, .flex h5:hover{
+    color:var(--secondary-color);
+    border-bottom: 1px solid var(--detail-color);
+    transition:0.4s;
+    cursor: default;
+}
+#msform fieldset h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#msform fieldset:first-of-type input, #msform fieldset:first-of-type textarea{
+    width:90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    margin:25px 0;
+    height:30px;
+    border-radius: 10px;
+    border: 1px solid var(--secondary-dark-color);
+}
+#msform fieldset:first-of-type textarea{
+    height:100px
+}
+.payment-tabs .payment-method h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.payment-tabs .pm-item{
+    display: flex;
+    align-items: center;
+}
+.flex{
+    display: flex;
+}
+.pm-thumb{
+    margin: 10px;
+}
+.payment-input{
+    border: 1px solid var(--light-text-color);
+    margin: 5px 0;
+}
+.payment-input .form-group{
+    border-bottom: 1px solid var(--border-color);
+    padding: 10px;
+}
+.payment-input .form-group:last-child{
+    border-bottom: 0;
+}
+.form-group.succes{
+    display: flex;
+
+}
+.form-group.succes input{
+    margin-left: 15%;
+    
+}
+.form-group.succes input{
+    width: 40%;
+    height: 30px;
+    border: 1px solid var(--light-text-color);
+    text-align: center;
+}
+.form-group.half{
+    display: flex;
+}
+.form-group.half .row{
+    margin-left: 30px;
+    
+} 
+.form-group .row select{
+    border: 1px solid var(--light-text-color);
+}
+.form-group #ccname, #cccode{
+    margin-left: 30px;
+    border: 1px solid var(--light-text-color);
+}
+#cccode{
+    width:35px;
+}
+#ccname{
+    border: 1px solid var(--light-text-color);
+    width:40%;
+    height: 25px;
+    text-align: center;
+}
+.payment-actions{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:30px
+}
+.payment-actions button{
+    height: 40px;
+    margin:0 20px;
+    padding: 5px;
+    background-color: var(--btn-color);
+    border: 1px solid var(--secondary-dark-color);
+    border-radius: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+.payment-actions button:hover{
+    background-color: var(--secondary-color);
+    color:var(--white-color);
+    transform: scale(1.1);
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.payImg{
+    margin-top: 50px;
+}
+main .paiImg, main#msform{
+    max-width: 75%;
+}
+.happyImg{
+    max-width: 80%;
+}
+@media screen and (max-width:800px){
+    .payImg{
+        max-width: 70%;
+    }
+    #msform{
+        flex-direction: column;
+    }
+    #msform fieldset{
+        width:90%;
+        border: none;
+    }
+    #msform fieldset:first-of-type{
+        width: 90%;
+    }
+}
+@media screen and (max-width:515px){
+    .form-group.succes input{
+        margin-left: 5%;
+    }
+    .payment-actions button{
+        height:min-content;
+    }
+
+}

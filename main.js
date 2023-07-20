@@ -1,18 +1,18 @@
 //menu mobile
-    //copy dptCat to departments
-    // const dptCategory= document.querySelector('.dptCat');
-    // const dptPlace=document.querySelector('.departments');
-    // dptPlace.innerHTML=dptCategory.innerHTML;
+    // copy dptCat to departments
+    const dptCategory= document.querySelector('.dptCat');
+    const dptPlace=document.querySelector('.departments');
+    dptPlace.innerHTML=dptCategory.innerHTML;
     
-    // //copy nav to nav
-    // const miniNav=document.querySelector('.headerNav nav');
-    // const navPlace=document.querySelector('.offCanvas nav');
-    // navPlace.innerHTML=miniNav.innerHTML
+    //copy nav to nav
+    const miniNav=document.querySelector('.headerNav nav');
+    const navPlace=document.querySelector('.offCanvas nav');
+    navPlace.innerHTML=miniNav.innerHTML
 
-    // //copy .headerTop to .topNav
-    // const topNav=document.querySelector('.headerTop .wrapper');
-    // const topPlace=document.querySelector('.offCanvas .topNav');
-    // topPlace.innerHTML=topNav.innerHTML;
+    //copy .headerTop to .topNav
+    const topNav=document.querySelector('.headerTop .wrapper');
+    const topPlace=document.querySelector('.offCanvas .topNav');
+    topPlace.innerHTML=topNav.innerHTML;
 
 
 //Slider-carousel
@@ -45,7 +45,28 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
+document.getElementsByClassName('sliderBtn')[0].addEventListener('click', ()=>{
+  event.preventDefault();
+  window.location='products.html'
+})
+document.getElementsByClassName('sliderBtn')[1].addEventListener('click', ()=>{
+  event.preventDefault();
+  window.location='products.html'
+})
+document.getElementsByClassName('sliderBtn')[2].addEventListener('click', ()=>{
+  event.preventDefault();
+  window.location='products.html'
+})
 
+function redirectToProductPage() {
+  window.location.href = "product.html?index=2";
+}
+function redirectToProductPage2() {
+  window.location.href = "product.html?index=7";
+}
+function redirectToProductPage3() {
+  window.location.href = "product.html?index=30";
+}
 function switchScrollable(){
     const titles = document.querySelectorAll('.imgTitle');
   const prices = document.querySelectorAll('.currentP');
